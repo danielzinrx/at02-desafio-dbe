@@ -53,6 +53,6 @@ Criando a função ( Linha 64 )
   
 Incluindo um botão para cancelar a edição.   
 //Logo após o botão salvar  
-<button className="btn btn-secondary btn-sm ms-2" onClick={handleCancelClick}>  
+ <button className="btn btn-secondary btn-sm ms-2" onClick={handleCancelClick}>  
 Cancelar  
-</button>  
+ </button>  
