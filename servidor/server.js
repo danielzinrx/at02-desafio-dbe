@@ -8,7 +8,7 @@ const db = mysql.createPool({
   user: "root",
   port: 3306,
   password: "",
-  database: "crudealunos"
+  database: "crudalunos"
 })
 
 /*app.get("/",(req, )=>{
