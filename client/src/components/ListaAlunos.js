@@ -13,7 +13,7 @@ function ListaAlunos() {
 
   // Use o useEffect para fazer uma solicitação GET e obter a lista de alunos.
   useEffect(() => {
-    Axios.get("http://localhost:3001/listar")
+    Axios.get("http://localhost:3002/listar")
       .then((response) => {
         setAlunos(response.data);
       })
@@ -24,7 +24,7 @@ function ListaAlunos() {
 
   // Função para lidar com a exclusão de um aluno.
   const handleExcluirAluno = (alunoId) => {
-    Axios.delete(`http://localhost:3001/excluir/${alunoId}`)
+    Axios.delete(`http://localhost:3002/excluir/${alunoId}`)
       .then((response) => {
         // Atualize a lista de alunos após a exclusão bem-sucedida.
         setAlunos((prevAlunos) => prevAlunos.filter((aluno) => aluno.id !== alunoId));
@@ -44,7 +44,7 @@ function ListaAlunos() {
   // Função para lidar com o clique no botão "Salvar".
   const handleSaveClick = () => {
     // Envie uma solicitação PUT para a rota de edição com os novos dados.
-    Axios.put(`http://localhost:3001/editar/${editingAluno.id}`, editedData)
+    Axios.put(`http://localhost:3002/editar/${editingAluno.id}`, editedData)
       .then((response) => {
         console.log(response.data);
         // Atualize a lista de alunos após a edição bem-sucedida.
