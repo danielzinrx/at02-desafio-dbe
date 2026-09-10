@@ -22,7 +22,7 @@ function CadastroAluno() {
   const handleClickButton = (e) => {
     e.preventDefault();
     // Faça uma solicitação POST para a URL especificada com os dados do aluno.
-    Axios.post("http://localhost:3002/register", {
+    Axios.post("http://localhost:3001/register", {
       nome: values.nome,
       idade: values.idade
     }).then((response) => {
